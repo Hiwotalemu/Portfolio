@@ -109,6 +109,12 @@
   --h5: 30px;
   --h6: 20px;
 }
+body {
+  padding-top: 60px; /* Adjust based on the header height */
+}
+
+
+
 
 .image-container {
   display: flex;
@@ -11355,6 +11361,9 @@ body {
   .cd-headline.clip b.is-visible {
     opacity: 1;
   }
+  
+
+
   
   /* Header  */
   /*---------------------------
