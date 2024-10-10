@@ -131,6 +131,34 @@
   transform: scale(1.1); /* Slightly increase size on hover */
 }
 
+.header-right {
+  position: relative;
+}
+
+.nav-menu {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: white; /* Change as needed */
+  border: 1px solid #ccc; /* Change as needed */
+  z-index: 1000; /* Ensure it appears above other elements */
+}
+
+.nav-item {
+  padding: 10px 15px; /* Adjust padding as needed */
+}
+
+.nav-item a {
+  text-decoration: none;
+  color: black; /* Change as needed */
+}
+
+.nav-item a:hover {
+  background: #f0f0f0; /* Change as needed */
+}
 
 body {
   background-color: #121212; /* Dark background for contrast */
