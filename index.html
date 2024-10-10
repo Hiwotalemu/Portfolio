@@ -19,6 +19,8 @@
 
     <!-- Style css -->
     <link rel="stylesheet" href="assets/css/style.css">
+    <script src="https://unpkg.com/feather-icons"></script>
+
 </head>
 
 
@@ -66,9 +68,23 @@
 
 
 
+<div class="backto-top" id="backToTop">
+    <div>
+        <i data-feather="arrow-up"></i>
+    </div>
+</div>
 
+<script>
+    feather.replace();
+    // Scroll to top function
+    document.getElementById('backToTop').addEventListener('click', function() {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth' // This makes the scroll smooth
+        });
+    });
+</script>
 
-          
                     <!-- End Header Right  -->
 
                
