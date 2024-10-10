@@ -22,95 +22,127 @@
 </head>
 
 
-<body class="template-color-1 spybody white-version" data-spy="scroll" data-target=".navbar-example2" data-offset="150" data-aos-easing="ease" data-aos-duration="400" data-aos-delay="0">
-    <header class="rn-header haeder-default black-logo-version header--fixed header--sticky">
-        <div class="header-wrapper rn-popup-mobile-menu m--0 row align-items-center">
-            <!-- Start Header Left -->
-            <div class="col-lg-2 col-6">
-                <div class="header-left">
-                    <div class="logo">
-                        <a href="index.html">
-                             <!-- <img src="assets/images/logo/logo-dark.png" alt="logo"> -->
-                        </a>
-                    </div>
+<body>
+    <header class="rn-header">
+        <div class="header-wrapper">
+            <div class="header-left">
+                <div class="logo">
+                    <a href="index.html"></a>
                 </div>
             </div>
-            <!-- End Header Left -->
-            <!-- Start Header Center -->
-            <div class="col-lg-10 col-6">
-                <div class="header-center">
-                    <nav id="sideNav" class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
-                        <!-- Start Mainmanu Nav -->
-                        <ul class="primary-menu nav nav-pills">
-                            <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#clients">Close-Up</a></li>
-                          
-                            <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
-                        </ul>
-                        <!-- End Mainmanu Nav -->
-                    </nav>
-                    <!-- Start Header Right  -->
-                    <div class="header-right">
-                        <div class="hamberger-menu d-block d-xl-none">
-                            <i id="menuBtn" class="feather-menu humberger-menu" onclick="toggleMenu()"></i>
-                        </div>
-                        
-                        <div class="close-menu d-block" id="closeBtn" style="display: none;" onclick="toggleMenu()">
-                            <span class="closeTrigger">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                                    <line x1="18" y1="6" x2="6" y2="18"></line>
-                                    <line x1="6" y1="6" x2="18" y2="18"></line>
-                                </svg>
-                            </span>
-                        </div>
-                        
-                        <ul id="navMenu" class="nav-menu" style="display: none;">
-                            <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#clients">Close-Up</a></li>
-                            <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
-                        </ul>
+            <div class="header-center">
+                <nav id="sideNav" class="mainmenu-nav navbar-example2">
+                    <ul class="primary-menu nav nav-pills">
+                        <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#clients">Close-Up</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="header-right">
+                    <div class="hamberger-menu" id="menuBtn">
+                        <i class="feather-menu"></i>
                     </div>
-                    
-                   
-                <script>
+                    <div class="close-menu d-none" id="closeMenu">
+                        <span class="closeTrigger">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                                <line x1="18" y1="6" x2="6" y2="18"></line>
+                                <line x1="6" y1="6" x2="18" y2="18"></line>
+                            </svg>
+                        </span>
+                    </div>
+                </div>
+                <div class="popup-mobile-menu" id="popupMenu">
+                    <div class="inner">
+                        <div class="content">
+                            <ul class="primary-menu nav nav-pills onepagenav">
+                                <li class="nav-item current"><a class="nav-link" href="#">Home</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
+                                <li class="nav-item"><a class="nav-link" href="#clients">Close-Up</a></li>                    
+                                <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
                 
-                function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    const closeBtn = document.getElementById('closeBtn');
+                <script>
+                    const menuBtn = document.getElementById('menuBtn');
+                    const closeMenu = document.getElementById('closeMenu');
+                    const popupMenu = document.getElementById('popupMenu');
+                
+                    menuBtn.addEventListener('click', function() {
+                        popupMenu.classList.add('active'); // Show the menu
+                        closeMenu.classList.remove('d-none'); // Show close button
+                        menuBtn.classList.add('d-none'); // Hide hamburger button
+                    });
+                
+                    closeMenu.addEventListener('click', function() {
+                        popupMenu.classList.remove('active'); // Hide the menu
+                        closeMenu.classList.add('d-none'); // Hide close button
+                        menuBtn.classList.remove('d-none'); // Show hamburger button
+                    });
+                </script>
+            </div>
+        </div>
+    </header>
+
+    <!-- <div class="mobile-menu d-none">
+        <ul class="mobile-primary-menu">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#portfolio">Portfolio</a></li>
+            <li><a href="#resume">Resume</a></li>
+            <li><a href="#clients">Close-Up</a></li>
+            <li><a href="#contacts">Contact</a></li> -->
+        </ul>
+    </div>
+</body>
+
+                   
+                <!-- <script>
+                    
+document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById("menuBtn");
+    const closeMenu = document.getElementById("closeMenu");
+    const mobileMenu = document.querySelector(".mobile-menu");
     
-    if (navMenu.style.display === 'none' || navMenu.style.display === '') {
-        navMenu.style.display = 'block';
-        closeBtn.style.display = 'block';
-    } else {
-        navMenu.style.display = 'none';
-        closeBtn.style.display = 'none';
-    }
-}
+    menuBtn.addEventListener("click", function() {
+        mobileMenu.classList.add("active");
+        menuBtn.classList.add("d-none"); // Hide hamburger icon
+        closeMenu.classList.remove("d-none"); // Show close icon
+    });
+    
+    closeMenu.addEventListener("click", function() {
+        mobileMenu.classList.remove("active");
+        closeMenu.classList.add("d-none"); // Hide close icon
+        menuBtn.classList.remove("d-none"); // Show hamburger icon
+    });
+});
 
 
                     // Wait for the DOM to fully load
-// document.addEventListener("DOMContentLoaded", function() {
-//     const menuBtn = document.getElementById("menuBtn");
-//     const popupMenu = document.querySelector(".popup-mobile-menu");
-//     const closeBtn = popupMenu.querySelector(".close-menu-activation");
+                    function toggleMenu() {
+    const navMenu = document.getElementById('navMenu');
+    const menuBtn = document.getElementById('menuBtn');
+    const closeBtn = document.getElementById('closeBtn');
 
-//     // Toggle the mobile menu on hamburger icon click
-//     menuBtn.addEventListener("click", function() {
-//         popupMenu.classList.toggle("menu-open");
-//     });
+    const isMenuVisible = navMenu.style.display === 'block';
 
-//     // Close the mobile menu when the close button is clicked
-//     closeBtn.addEventListener("click", function() {
-//         popupMenu.classList.remove("menu-open");
-//     });
+    if (isMenuVisible) {
+        navMenu.style.display = 'none';
+        closeBtn.style.display = 'none';
+        menuBtn.style.display = 'block';
+    } else {
+        navMenu.style.display = 'block';
+        closeBtn.style.display = 'block';
+        menuBtn.style.display = 'none';
+    }
+} -->
 
-// });
 
 
                 </script>
@@ -121,6 +153,7 @@
             <!-- End Header Center -->
         </div>
     </header>
+    
     <div class="popup-mobile-menu">
         <div class="inner">
             <div class="menu-top">
@@ -128,6 +161,8 @@
                     <a class="logo" href="index.html">
                         <!-- <img src="assets/images/logo/logos-circle.png" alt="Personal Portfolio"> -->
                     </a>
+                  
+                    
                     <div class="close-button">
                         <button class="close-menu-activation close">
                             <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
@@ -162,7 +197,7 @@
                                     <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                                 </svg></a>
                         </li> -->
-                        <li class="linkedin"><a href="https://www.linkedin.com/in/hiwot-alemu1/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                        <li class="linkedin"><a href="https://www.linkedin.com/in/hiwot-alemu1/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                                     <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                     <rect x="2" y="9" width="4" height="12"></rect>
                                     <circle cx="4" cy="4" r="2"></circle>
@@ -174,7 +209,13 @@
             </div>
         </div>
     </div>
+<script>
 
+
+
+
+
+</script>
     
 
    
@@ -186,9 +227,9 @@
                 <div class="section-title text-left aos-init aos-animate" data-aos="fade-up" data-aos-duration="500" data-aos-delay="100" data-aos-once="true">
                     <span class="subtitle">Welcome </span>
                     <h1 class="title">
-                        <span style="color: black;">Hi, I’m </span>
+                        <span style="color: white;">Hi, I’m </span>
                         <span style="color: hotpink;">Hiwot Alemu</span>
-                        <span style="color: black;"> a </span><br>
+                        <span style="color: white;"> a </span><br>
                         <span class="header-caption" id="page-top">
                             <span class="cd-headline clip is-full-width">
                                 <span class="typing"></span>
@@ -232,7 +273,7 @@
                             <span class="title">Connect With Me</span>
                             <ul class="social-share d-flex liststyle">
                                 <li class="linkedin">
-                                    <a href="https://www.linkedin.com/in/hiwot-alemu1/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="Black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
+                                    <a href="https://www.linkedin.com/in/hiwot-alemu1/"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg></a>
                                 </li>
                             </ul>
                         </div>
@@ -270,7 +311,7 @@
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script>
 $(document).ready(function() {
-    const words = ['Developer.', 'Designer.', 'Innovator.']; // Words to type
+    const words = ['Developer.', 'Designer.', 'Innovator.'] ; // Words to type
     const typingSpeed = 150; // Speed of typing
     const erasingSpeed = 100; // Speed of erasing
     const pauseTime = 1500; // Time to pause after each word
@@ -947,7 +988,7 @@ $(document).ready(function() {
                                     <label for="subject">Add Me</label>
                                     <div class="social-icone">
                                         <a href="https://www.linkedin.com/in/hiwot-alemu1/">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="Black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-linkedin">
                                                 <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
                                                 <rect x="2" y="9" width="4" height="12"></rect>
                                                 <circle cx="4" cy
