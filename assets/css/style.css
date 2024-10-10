@@ -121,6 +121,15 @@
   height: auto;               /* Maintain aspect ratio */
 }
 
+.hamberger-menu {
+  cursor: pointer; /* Change cursor to pointer */
+  transition: color 0.3s, transform 0.3s; /* Smooth transition */
+}
+
+.hamberger-menu:hover {
+  color: #007bff; /* Change color on hover (adjust to your design) */
+  transform: scale(1.1); /* Slightly increase size on hover */
+}
 
 
 body {
