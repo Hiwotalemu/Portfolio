@@ -31,7 +31,8 @@
                 </div>
             </div>
             <div class="header-center">
-                <nav id="sideNav" class="mainmenu-nav navbar-example2">
+                <nav id="sideNav"  class="mainmenu-nav navbar-example2 d-none d-xl-block onepagenav">
+                     
                     <ul class="primary-menu nav nav-pills">
                         <li class="nav-item current"><a class="nav-link" href="#home">Home</a></li>
                         <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
@@ -42,118 +43,41 @@
                     </ul>
                 </nav>
                 <div class="header-right">
-                    <div class="hamberger-menu" id="menuBtn">
+                    <div class="hamburger-icon">
+                        <button class="hamburger">
                         <i class="feather-menu"></i>
                     </div>
                     <div class="close-menu d-none" id="closeMenu">
                         <span class="closeTrigger">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" fill="none" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
                                 <line x1="18" y1="6" x2="6" y2="18"></line>
                                 <line x1="6" y1="6" x2="18" y2="18"></line>
                             </svg>
                         </span>
                     </div>
                 </div>
-                <div class="popup-mobile-menu" id="popupMenu">
-                    <div class="inner">
-                        <div class="content">
-                            <ul class="primary-menu nav nav-pills onepagenav">
-                                <li class="nav-item current"><a class="nav-link" href="#">Home</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#portfolio">Portfolio</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#resume">Resume</a></li>
-                                <li class="nav-item"><a class="nav-link" href="#clients">Close-Up</a></li>                    
-                                <li class="nav-item"><a class="nav-link" href="#contacts">Contact</a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                
-                <script>
-                    const menuBtn = document.getElementById('menuBtn');
-                    const closeMenu = document.getElementById('closeMenu');
-                    const popupMenu = document.getElementById('popupMenu');
-                
-                    menuBtn.addEventListener('click', function() {
-                        popupMenu.classList.add('active'); // Show the menu
-                        closeMenu.classList.remove('d-none'); // Show close button
-                        menuBtn.classList.add('d-none'); // Hide hamburger button
-                    });
-                
-                    closeMenu.addEventListener('click', function() {
-                        popupMenu.classList.remove('active'); // Hide the menu
-                        closeMenu.classList.add('d-none'); // Hide close button
-                        menuBtn.classList.remove('d-none'); // Show hamburger button
-                    });
-                </script>
             </div>
         </div>
-    </header>
-
-    <!-- <div class="mobile-menu d-none">
-        <ul class="mobile-primary-menu">
-            <li><a href="#home">Home</a></li>
-            <li><a href="#features">Features</a></li>
-            <li><a href="#portfolio">Portfolio</a></li>
-            <li><a href="#resume">Resume</a></li>
-            <li><a href="#clients">Close-Up</a></li>
-            <li><a href="#contacts">Contact</a></li> -->
-        </ul>
     </div>
 </body>
 
                    
-                <!-- <script>
-                    
-document.addEventListener("DOMContentLoaded", function() {
-    const menuBtn = document.getElementById("menuBtn");
-    const closeMenu = document.getElementById("closeMenu");
-    const mobileMenu = document.querySelector(".mobile-menu");
-    
-    menuBtn.addEventListener("click", function() {
-        mobileMenu.classList.add("active");
-        menuBtn.classList.add("d-none"); // Hide hamburger icon
-        closeMenu.classList.remove("d-none"); // Show close icon
-    });
-    
-    closeMenu.addEventListener("click", function() {
-        mobileMenu.classList.remove("active");
-        closeMenu.classList.add("d-none"); // Hide close icon
-        menuBtn.classList.remove("d-none"); // Show hamburger icon
-    });
-});
-
-
-                    // Wait for the DOM to fully load
-                    function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    const menuBtn = document.getElementById('menuBtn');
-    const closeBtn = document.getElementById('closeBtn');
-
-    const isMenuVisible = navMenu.style.display === 'block';
-
-    if (isMenuVisible) {
-        navMenu.style.display = 'none';
-        closeBtn.style.display = 'none';
-        menuBtn.style.display = 'block';
-    } else {
-        navMenu.style.display = 'block';
-        closeBtn.style.display = 'block';
-        menuBtn.style.display = 'none';
-    }
-} -->
 
 
 
-                </script>
+
+
+
+          
                     <!-- End Header Right  -->
 
-                </div>
-            </div>
+               
             <!-- End Header Center -->
-        </div>
-    </header>
-    
+            <!-- <div class="hamburger-icon">
+                <button class="hamburger">
+                    <i data-feather="menu">Menu</i> Placeholder for hamburger icon -->
+                <!-- </button>
+            </div> --> 
     <div class="popup-mobile-menu">
         <div class="inner">
             <div class="menu-top">
@@ -164,12 +88,12 @@ document.addEventListener("DOMContentLoaded", function() {
                   
                     
                     <div class="close-button">
-                        <button class="close-menu-activation close">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-x">
-                                <line x1="18" y1="6" x2="6" y2="18"></line>
-                                     <line x1="6" y1="6" x2="18" y2="18"></line>
-                            </svg>
-                        </button>
+                        <div class="close-button">
+                            <button class="close-menu-activation close">
+                                <i data-feather="X" style="color: white;"></i>
+                            </button>
+                         </div>
+                        
                     </div>
                 </div>
                 <p class="discription">Hiwot Alemu </p>
@@ -209,13 +133,40 @@ document.addEventListener("DOMContentLoaded", function() {
             </div>
         </div>
     </div>
-<script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const menuButton = document.querySelector('.hamburger');
+            const popupMenu = document.querySelector('.popup-mobile-menu');
 
+            // Event listener for the hamburger icon click
+            menuButton.addEventListener('click', function() {
+                // Toggle the menu-open class
+                popupMenu.classList.toggle('menu-open');
 
+                // If menu is open, adjust visibility of inner content
+                if (popupMenu.classList.contains('menu-open')) {
+                    popupMenu.style.visibility = 'visible'; // Make it visible immediately
+                } else {
+                    // Add a timeout to hide it after fade-out
+                    setTimeout(() => {
+                        if (!popupMenu.classList.contains('menu-open')) {
+                            popupMenu.style.visibility = 'hidden'; // Hide after fade-out
+                        }
+                    }, 500); // Match the duration of the fade-out
+                }
+            });
 
-
-
-</script>
+            // Close button functionality
+            const closeButton = document.querySelector('.close-menu-activation');
+            closeButton.addEventListener('click', function() {
+                popupMenu.classList.remove('menu-open'); // Close the menu
+                setTimeout(() => {
+                    popupMenu.style.visibility = 'hidden'; // Hide after fade-out
+                }, 500); // Match the duration of the fade-out
+            });
+        });
+    </script>
+    
     
 
    
