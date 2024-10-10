@@ -173,7 +173,7 @@ body {
   top: 100%;
   left: 0;
   background: white; /* Change as needed */
-  border: 1px solid #ccc; /* Change as needed */
+  border: 0.2px solid #ccc; /* Change as needed */
   z-index: 1000; /* Ensure it appears above other elements */
 }
 
