@@ -137,12 +137,13 @@
         document.addEventListener('DOMContentLoaded', function() {
             const menuButton = document.querySelector('.hamburger');
             const popupMenu = document.querySelector('.popup-mobile-menu');
-
+            const navLinks = document.querySelectorAll('.primary-menu .nav-link');
+    
             // Event listener for the hamburger icon click
             menuButton.addEventListener('click', function() {
                 // Toggle the menu-open class
                 popupMenu.classList.toggle('menu-open');
-
+    
                 // If menu is open, adjust visibility of inner content
                 if (popupMenu.classList.contains('menu-open')) {
                     popupMenu.style.visibility = 'visible'; // Make it visible immediately
@@ -155,7 +156,7 @@
                     }, 500); // Match the duration of the fade-out
                 }
             });
-
+    
             // Close button functionality
             const closeButton = document.querySelector('.close-menu-activation');
             closeButton.addEventListener('click', function() {
@@ -164,8 +165,19 @@
                     popupMenu.style.visibility = 'hidden'; // Hide after fade-out
                 }, 500); // Match the duration of the fade-out
             });
+    
+            // Add event listener to each navigation link
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    popupMenu.classList.remove('menu-open'); // Close the menu
+                    setTimeout(() => {
+                        popupMenu.style.visibility = 'hidden'; // Hide after fade-out
+                    }, 500); // Match the duration of the fade-out
+                });
+            });
         });
     </script>
+    
     
     
 
@@ -820,6 +832,8 @@ $(document).ready(function() {
                     <!-- <div class="separator"></div> -->
             
                     <div class="client-name"><span><a style="color: black;">MusicRec</a></span></div>
+                    <p style="font-size: smaller;">Above is the user interface for music recommendations, featuring a post that lets you share with your followers and connect with others. Take a look at how the post might appear.</p>
+
                 </div>
             </div>
             <!-- End Single Brand -->
@@ -831,7 +845,9 @@ $(document).ready(function() {
                                                 <!-- <source src="assets/videos/mus.mov" type="video/mp4"> -->
 
                                                 <a href="#"><img src="assets/images/sc2.png" alt="Client-image"></a>
-                                              
+                                                <p style="font-size: smaller;"> 
+                                                    Music Rec also provides a list of your favorite albums along with additional suggestions based on those choices.</p>
+
                                                                                         <!-- <source src="assets/videos/mus.mov" type="video/mp4"> -->
                                             </div>
                                             <!-- <div class="separator"></div> -->
@@ -853,6 +869,8 @@ $(document).ready(function() {
         <!-- <div class="separator"></div> -->
 
         <div class="client-name"><span><a style="color: black;">MusicRec</a></span></div>
+        <p style="font-size: smaller;"> Above is the user interface for music recommendations, featuring a post that lets you share with your followers and connect with others. Take a look at how the post might appear.</p>
+
     </div>
 </div>
 
