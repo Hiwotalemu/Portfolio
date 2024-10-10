@@ -80,19 +80,22 @@
                    
                 <script>
                     // Wait for the DOM to fully load
-                    function toggleMenu() {
-    const navMenu = document.getElementById('navMenu');
-    const closeBtn = document.getElementById('closeBtn');
-    
-    if (navMenu.style.display === 'none' || navMenu.style.display === '') {
-        navMenu.style.display = 'block';
-        closeBtn.style.display = 'block';
-    } else {
-        navMenu.style.display = 'none';
-        closeBtn.style.display = 'none';
-    }
-}
+document.addEventListener("DOMContentLoaded", function() {
+    const menuBtn = document.getElementById("menuBtn");
+    const popupMenu = document.querySelector(".popup-mobile-menu");
+    const closeBtn = popupMenu.querySelector(".close-menu-activation");
 
+    // Toggle the mobile menu on hamburger icon click
+    menuBtn.addEventListener("click", function() {
+        popupMenu.classList.toggle("menu-open");
+    });
+
+    // Close the mobile menu when the close button is clicked
+    closeBtn.addEventListener("click", function() {
+        popupMenu.classList.remove("menu-open");
+    });
+
+});
 
 
                 </script>
