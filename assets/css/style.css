@@ -173,7 +173,7 @@ body {
   top: 100%;
   left: 0;
   background: white; /* Change as needed */
-  border: 0.2px solid #ccc; /* Change as needed */
+  border: 1px solid #ccc; /* Change as needed */
   z-index: 1000; /* Ensure it appears above other elements */
 }
 
@@ -11394,8 +11394,17 @@ body {
   .nav-pills .nav-link {
     margin: 0.5rem 1rem;
     padding: 0;
+    
   }
-  
+  .hamburger-container {
+    margin-left: 70px; /* Adjusted for more space */
+}
+
+
+  .move-left {
+    padding-left: 10px; /* Adjust this value as needed */
+}
+
   .header-wrapper {
     height: 122px;
     padding: 0 64px;
