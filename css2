@@ -129,4 +129,7 @@
   flex-direction: column;
   justify-content: space-between;
 }
+#currentWork .section-title .title {
+  display: block !important;
+}
 
